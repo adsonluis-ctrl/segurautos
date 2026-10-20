@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Simulador de consórcio | Segurautos</title>
+<meta name="description" content="Simule seu consórcio de imóvel, automóvel, pesados ou serviços e compare as administradoras com a Segurautos. Sem juros.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/cotar.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="index.html" aria-label="Segurautos, página inicial"><img class="logo" src="assets/img/logo.svg" alt="Segurautos" width="126" height="22"></a>
+    <nav class="nav-links" id="menu" aria-label="Principal"><a href="cotar-auto.html">Auto</a><a href="cotar-consorcio.html" aria-current="page">Consórcio</a><a href="cotar-empresarial.html">Empresarial</a><a href="cotar-frotas.html">Frotas</a><a href="cotar-cargas.html">Cargas</a><a href="index.html#unidades">Unidades</a></nav>
+    <a class="nav-cta" href="#" data-wa="Olá! Vim pelo site da Segurautos.">Falar no WhatsApp</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
+</header>
+
+<main id="topo">
+<section>
+  <div class="wrap cs-hero" style="padding-top:0;padding-bottom:0">
+    <div>
+      <p class="eyebrow rv">Consórcio</p>
+      <h1 class="h1 rv">Compare e simule<br>seu consórcio<br>num lugar só.</h1>
+      <p class="lead rv">Imóvel, automóvel, pesados ou serviços nas principais administradoras do país. Sem juros, e com a Segurautos do seu lado da simulação até a contemplação.</p>
+      <div class="btns rv"><a class="btn btn-yel" href="#simulador">Simular agora</a></div>
+    </div>
+    <div class="cs-ph rv">
+      <img src="assets/img/bem-imovel.webp" alt="Casa moderna com jardim" width="889" height="1000">
+      <div class="glass" id="heroGlass"><small>Parcelas a partir de</small><strong id="heroMin">—</strong><em id="heroMinSub"></em></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" style="padding:56px 0">
+  <div class="wrap">
+    <p class="adms-l">Administradoras parceiras</p>
+    <div class="adms" id="adms"></div>
+  </div>
+</section>
+
+<section id="simulador">
+  <div class="wrap">
+    <div class="head rv">
+      <h2 class="h2">Escolha o bem e o crédito.<br>A gente compara.</h2>
+      <p class="lead">Veja a parcela estimada em cada administradora e escolha a que cabe no seu plano.</p>
+    </div>
+    <div class="calc rv" id="calc">
+      <div class="tabs" id="tabs" role="group" aria-label="Tipo de bem"></div>
+      <div class="calc-b">
+        <div class="calc-l">
+          <span class="k">Contratação</span>
+          <div class="seg" id="pessoa" role="group" aria-label="Tipo de contratação">
+            <button type="button" class="at" data-p="PF" aria-pressed="true">Pessoa física</button>
+            <button type="button" data-p="PJ" aria-pressed="false">Pessoa jurídica</button>
+          </div>
+          <span class="k">Valor do crédito</span>
+          <div class="val" id="credVal" aria-live="polite">—</div>
+          <input type="range" id="cred" min="0" max="0" step="1000" value="0" aria-label="Valor do crédito">
+          <div class="lim"><span id="credMin"></span><span id="credMax"></span></div>
+          <div class="adm-pick" id="admPick"></div>
+        </div>
+        <div class="calc-r" id="res" aria-live="polite"></div>
+      </div>
+      <div class="disc"><b>Valores estimados</b>, calculados a partir das tabelas das administradoras e sujeitos a arredondamento. A simulação não representa o valor final: a parcela real depende do grupo, das vagas disponíveis e da data de contratação. Confirme a proposta oficial com um consultor da Segurautos.</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="como-funciona">
+  <div class="wrap split">
+    <div class="ph rv" id="bemPh" style="background-image:url(assets/img/bem-automovel.webp)" role="img" aria-label="Foto do bem escolhido"></div>
+    <div class="rv">
+      <h2 class="h2">Você escolhe.<br>A gente cuida do resto.</h2>
+      <ol class="list">
+        <li><b>1</b><div><h3>Simule</h3><p>Compare as administradoras e encontre o crédito e a parcela certos.</p></div></li>
+        <li><b>2</b><div><h3>Fale com um consultor</h3><p>Grupos disponíveis, estratégia de lance e a melhor opção para você.</p></div></li>
+        <li><b>3</b><div><h3>Contrate e acompanhe</h3><p>Assinatura digital e acompanhamento da Segurautos até a entrega do crédito.</p></div></li>
+      </ol>
+      <p class="lead" style="margin-top:34px;font-size:18px">Sem juros: você paga só a taxa de administração, diluída no prazo. Com lance, inclusive embutido, dá para antecipar a contemplação sem ter todo o valor guardado.</p>
+    </div>
+  </div>
+</section>
+
+<section id="proposta">
+  <div class="wrap">
+    <div class="head rv">
+      <h2 class="h2">Receba sua proposta oficial.</h2>
+      <p class="lead">Responda rapidinho e um consultor da Segurautos chama você no WhatsApp com a proposta certa.</p>
+    </div>
+    <div class="card rv" style="padding:36px 30px">
+      <div class="fs">
+        <div class="f full" id="fNome"><label for="qNome">Nome completo</label><input type="text" id="qNome" placeholder="Como podemos chamar você?" autocomplete="name"></div>
+        <div class="f" id="fWhats"><label for="qWhats">WhatsApp com DDD</label><input type="tel" id="qWhats" placeholder="(98) 90000-0000" inputmode="tel" autocomplete="tel"></div>
+        <div class="f"><label for="qBem">Tipo de bem</label><select id="qBem"></select></div>
+        <div class="f"><label for="qCredito">Qual crédito você busca?</label><input type="text" id="qCredito" placeholder="Ex.: R$ 200.000"></div>
+        <div class="f"><label for="qParcela">Qual parcela ficaria boa? <span class="op">(opcional)</span></label><input type="text" id="qParcela" placeholder="Ex.: R$ 800 por mês"></div>
+        <div class="f full"><label for="qAdm">Administradora de preferência</label><select id="qAdm"></select></div>
+        <div class="f full"><span class="lbl">Você teria um valor para dar de lance?</span><div class="chs" data-g="qLance"><button type="button" class="ch" data-v="sim" aria-pressed="false">Sim, tenho valor</button><button type="button" class="ch" data-v="nao" aria-pressed="false">Não, prefiro sorteio</button></div>
+          <div id="qLanceValorWrap" hidden style="margin-top:10px"><input type="text" id="qLanceValor" placeholder="Quanto teria disponível? Ex.: R$ 30.000" aria-label="Valor disponível para lance"></div></div>
+        <div class="f full"><label for="qPrazo">Em quanto tempo espera comprar?</label><select id="qPrazo"><option value="">Selecione</option><option>O quanto antes</option><option>Até 3 meses</option><option>3 a 6 meses</option><option>Mais de 6 meses, estou me planejando</option></select></div>
+        <div class="f full"><span class="lbl">Mais alguém participa dessa decisão?</span><div class="chs" data-g="qDecisao"><button type="button" class="ch" data-v="Sim" aria-pressed="false">Sim</button><button type="button" class="ch" data-v="Não, decido sozinho(a)" aria-pressed="false">Não, decido sozinho(a)</button></div></div>
+        <div class="f full"><span class="lbl">Se a proposta fizer sentido, avança ainda esta semana?</span><div class="chs" data-g="qPronto"><button type="button" class="ch" data-v="Sim" aria-pressed="false">Sim, estou pronto(a)</button><button type="button" class="ch" data-v="Preciso avaliar com calma" aria-pressed="false">Preciso avaliar com calma</button></div></div>
+        <div class="f full"><span class="lbl">Unidade de atendimento</span><div class="chs" data-g="qUnidade"><button type="button" class="ch" data-v="São Luís" aria-pressed="false">São Luís</button><button type="button" class="ch" data-v="Brasília" aria-pressed="false">Brasília</button><button type="button" class="ch" data-v="Outra cidade" aria-pressed="false">Outra cidade</button></div></div>
+      </div>
+      <p class="err" id="qErr" role="alert" hidden>Preencha seu nome e WhatsApp para a gente poder chamar você.</p>
+      <button type="button" class="btn btn-yel" id="qEnviar" style="width:100%;margin-top:26px">Enviar e falar com um consultor</button>
+      <p class="note">Suas respostas vão direto para o WhatsApp da Segurautos. Nenhum dado fica salvo neste site.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="duvidas">
+  <div class="wrap">
+    <div class="head rv"><h2 class="h2">Perguntas frequentes.</h2></div>
+    <div class="faq rv"><details><summary>O consórcio tem juros?</summary><p>Não. Você paga a taxa de administração, que varia por administradora, faixa de crédito e tipo de bem, além do fundo de reserva. O simulador já aplica a taxa da faixa escolhida.</p></details><details><summary>Por que comparar administradoras?</summary><p>Cada administradora tem taxas, prazos, regras de lance e grupos diferentes. Comparar ajuda a escolher a que tem a parcela e a estratégia de contemplação mais adequadas para você.</p></details><details><summary>Quando serei contemplado?</summary><p>Todo mês há assembleia com sorteio e lances. Com lance, inclusive o embutido, você pode antecipar a contemplação. Nosso consultor monta a estratégia com você.</p></details><details><summary>O que são lance embutido e lance fixo?</summary><p>Lance embutido é usar parte do próprio crédito como lance: se for contemplado, recebe o crédito menos esse percentual. Lance fixo é um percentual pré-definido pelo grupo. As regras variam por administradora.</p></details><details><summary>O simulador mostra o valor exato da parcela?</summary><p>Não. É uma estimativa com base nas tabelas das administradoras. O valor final depende do grupo, das vagas e da data de contratação, e é confirmado pelo consultor na proposta oficial.</p></details><details><summary>Quem regula o consórcio?</summary><p>O consórcio é regulado e fiscalizado pelo Banco Central do Brasil.</p></details></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head rv"><h2 class="h2">Outros simuladores.</h2></div>
+    <div class="more"><a href="cotar-auto.html" class="rv"><strong>Seguro auto</strong><span>Colisão, roubo e terceiros.</span><em>Simular ›</em></a><a href="cotar-empresarial.html" class="rv"><strong>Empresarial</strong><span>Patrimônio e responsabilidade.</span><em>Simular ›</em></a><a href="cotar-frotas.html" class="rv"><strong>Frotas</strong><span>A partir de 2 veículos.</span><em>Simular ›</em></a><a href="cotar-cargas.html" class="rv"><strong>Cargas</strong><span>RCTR-C, RC-DC e RC-V.</span><em>Simular ›</em></a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div><img class="logo" src="assets/img/logo.svg" alt="Segurautos" width="103" height="18"><p>Corretora de seguros, consórcios e planos de saúde.<br>São Luís · MA e Brasília · DF.</p></div>
+      <div><h4>Simuladores</h4><a href="cotar-auto.html">Seguro auto</a><a href="cotar-consorcio.html">Consórcio</a><a href="cotar-empresarial.html">Empresarial</a><a href="cotar-frotas.html">Frotas</a><a href="cotar-cargas.html">Cargas</a></div>
+      <div><h4>Segurautos</h4><a href="index.html#produtos">Produtos</a><a href="index.html#como-funciona">Como funciona</a><a href="index.html#parceiras">Seguradoras</a><a href="index.html#unidades">Unidades</a><a href="index.html#duvidas">Dúvidas</a></div>
+      <div><h4>Contato</h4><a href="#" data-wa="Olá! Vim pelo site da Segurautos.">WhatsApp</a><a href="tel:+559833026798">(98) 3302-6798</a><a href="https://www.instagram.com/segurautos/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/segurautos" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+    <div class="f-bot">
+      <p>© <span id="ano">2026</span> Segurautos. Todos os direitos reservados.</p>
+      <p><a href="politica-de-privacidade.html">Política de privacidade</a></p>
+    </div>
+  </div>
+</footer>
+<a class="wa" href="#" data-wa="Olá! Vim pelo site da Segurautos." aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.23 8.24c0 4.54-3.7 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg></a>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/consorcio.js"></script>
+</body>
+</html>
